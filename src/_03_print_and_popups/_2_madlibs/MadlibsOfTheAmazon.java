@@ -36,11 +36,11 @@ public class MadlibsOfTheAmazon {
 		String story = 
 		
 				"MY "+adjective1+" DAY\n"
-						+ "Today I woke up and drank my some "+drink+" to wake me up.\n "
+						+ "Today I woke up and drank some "+drink+" to wake me up.\n "
 						+ "I had some "+food+" for breakfast and got on my way to "+place+" in my "+vehicle+" \n "
 						+ "My favorite thing to do in the "+vehicle+" is to "+activity+"\n "
 						+ "after I go to "+place+", I always make sure to stop by the pharmacy to get my daily dosage of "+medication+"\n"
-						+ "At this point in the day I am pretty "+adjective2+", So I should start preparing for my "+activity2+" tomorro go to bed";
+						+ "At this point in the day I am pretty "+adjective2+", So I should start preparing for my "+activity2+" tomorrow and go to bed";
 		
 										
 					
