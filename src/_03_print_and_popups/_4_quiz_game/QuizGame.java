@@ -10,13 +10,13 @@ public class QuizGame {
 		String story = 
 				"Instructions\n"
 				+ "If you get an answer right then you will get a point\n"
-				+ "There are 9 questions\n"
+				+ "There are 10 questions\n"
 				+ "the harder the question, the more points you will get\n"
 				+ "The easier the question, the more points you will lose"
 				+ "It is possible to get negative points\n"
 				+ "cAPiTalS dOn'T MaTter\n"
 				+ "Questions will gradually get harder\n"	
-				+ "best score is 45\n"
+				+ "best score is 55\n"
 				+ "Good Luck!";
 		
 		JOptionPane.showMessageDialog(null, story);
@@ -54,7 +54,7 @@ public class QuizGame {
 		
 		String question3 = JOptionPane.showInputDialog("Who painted the ceiling on the Sistine Chapel (first name only)");
 		
-		if (question3.equalsIgnoreCase("michealangelo")) {
+		if (question3.equalsIgnoreCase("michaelangelo")) {
 			score +=3;
 			JOptionPane.showMessageDialog(null," babababaBINGOOOOOO +3 points");
 		}
@@ -98,9 +98,9 @@ public class QuizGame {
 		
 		//111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 		
-		String question6 = JOptionPane.showInputDialog("Who painted the ceiling on the Sistine Chapel (first name only)");
+		String question6 = JOptionPane.showInputDialog("What is the name of the egyptian sun god");
 		
-		if (question6.equalsIgnoreCase("michealangelo")) {
+		if (question6.equalsIgnoreCase("ra")) {
 			score +=6;
 			JOptionPane.showMessageDialog(null," babababaBINGOOOOOO +6 points");
 		}
@@ -122,7 +122,7 @@ public class QuizGame {
 		}
 		else {
 			score-=4;
-			JOptionPane.showMessageDialog(null," go get em next time anphibian -4 points");
+			JOptionPane.showMessageDialog(null," go get em next time anphibian/ -4 points");
 		}
 		
 		//111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
@@ -145,7 +145,7 @@ public class QuizGame {
 		
 		String question9 = JOptionPane.showInputDialog("which movie won academy award for best picture in 1994?");
 		
-		if (question9.equalsIgnoreCase("Forest Gump")) {
+		if (question9.equalsIgnoreCase("Forrest Gump")) {
 			score +=9;
 			JOptionPane.showMessageDialog(null,"Run, Forest, Run! +9 points");
 		}
@@ -157,6 +157,19 @@ public class QuizGame {
 		
 		//111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 		
+		String question10 = JOptionPane.showInputDialog("which mammal lays eggs? (not acidna)");
+		
+		if (question10.equalsIgnoreCase("platypus")) {
+			score +=9;
+			JOptionPane.showMessageDialog(null,"hey, wheres perry? +10 points");
+		}
+		else {
+			score-=2;
+			JOptionPane.showMessageDialog(null,"it was a platypus -1 point :(" );
+			
+		}
+		
+		//111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 		JOptionPane.showMessageDialog(null, "your final score was " + score);
 				// 3.  Use an if statement to check if their answer is correct
 				
