@@ -14,16 +14,19 @@ public class DragonFight {
 		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
 
 		// 1. Create some variables to hold health levels
-		
+		int playerhealth;
+		int dragonhealth;
 			// playerHealth to store your health - set it equal to 100
-	
+	playerhealth = 100;
 			// dragonHealth to store the dragon's health - set it equal to 100
-
+	dragonhealth = 100;
 		// 2. Create some variables to hold the attack strengths. These will be given different values later. 
-		
+		int playerattack;
+		int dragonattack;
 			// playerAttack to store the damage the player's attack will do - set it equal
 			// to 0 for now.
-	
+	playerattack = 0;
+	dragonattack = 0;
 			// dragonAttack to store the damage the dragon's attack will do - set it equal
 			// to 0 for now.
 
@@ -32,6 +35,15 @@ public class DragonFight {
 		while (true) {
 
 			// THE PLAYER ATTACKS THE DRAGON
+			String attack1 = JOptionPane.showInputDialog("do you want to attack the dragon with \n"
+					+ "a yell or a kick");
+			
+			if (attack1.equalsIgnoreCase("yell")) {
+				ran.nextInt(10);
+			}
+			if (attack1.equalsIgnoreCase("kick")) {
+				ran.nextInt(10)
+			}
 
 				// 3. Ask the player in a pop-up if they want to attack the dragon with a yell
 				// or a kick
