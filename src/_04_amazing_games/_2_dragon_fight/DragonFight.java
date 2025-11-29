@@ -39,10 +39,10 @@ public class DragonFight {
 					+ "a yell or a kick");
 			
 			if (attack1.equalsIgnoreCase("yell")) {
-				ran.nextInt(10);
+				dragonhealth-=ran.nextInt(10);
 			}
 			if (attack1.equalsIgnoreCase("kick")) {
-				ran.nextInt(10)
+				dragonhealth-=ran.nextInt(10)+10;
 			}
 
 				// 3. Ask the player in a pop-up if they want to attack the dragon with a yell
@@ -62,6 +62,8 @@ public class DragonFight {
 			// THE DRAGON RETALIATES
 
 				// 7. Find a random number between 0 and 35 and store it in dragonAttack
+			dragonattack = ran.nextInt(34);
+			playerhealth -= dragonattack;
 	
 				// 8. Subtract the dragon attack value from the player's health
 
@@ -69,6 +71,9 @@ public class DragonFight {
 
 				// 9. If the player's health is less than or equal to 0, the game is over,
 				//    call the playerLost() method
+			if (playerhealth <=0) {
+				
+			}
 	
 			
 				// 10. If the dragon's health is less than or equal to 0, the game is over,
