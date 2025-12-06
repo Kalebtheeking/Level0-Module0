@@ -10,23 +10,23 @@ public class DragonFight {
 
 		Random ran = new Random();    //This will be used later to make random numbers. 
 
-		ImageIcon dragon = new ImageIcon("src/_04_amazing_games/_2_dragon_fight/dragonPicture.jpg");
-		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
+		ImageIcon sweat = new ImageIcon("/Level0-Module0/src/_04_amazing_games/_2_dragon_fight/sweatysoccerskin.png");
+		JOptionPane.showMessageDialog(null, "Help save the Fortnite island and defeats"," ",0, sweat);
 
 		// 1. Create some variables to hold health levels
 		int playerhealth;
-		int dragonhealth;
+		int sweathealth;
 			// playerHealth to store your health - set it equal to 100
 	playerhealth = 100;
 			// dragonHealth to store the dragon's health - set it equal to 100
-	dragonhealth = 100;
+	sweathealth = 100;
 		// 2. Create some variables to hold the attack strengths. These will be given different values later. 
 		int playerattack;
-		int dragonattack;
+		int sweatattack;
 			// playerAttack to store the damage the player's attack will do - set it equal
 			// to 0 for now.
 	playerattack = 0;
-	dragonattack = 0;
+	sweatattack = 0;
 			// dragonAttack to store the damage the dragon's attack will do - set it equal
 			// to 0 for now.
 
@@ -35,14 +35,14 @@ public class DragonFight {
 		while (true) {
 
 			// THE PLAYER ATTACKS THE DRAGON
-			String attack1 = JOptionPane.showInputDialog("do you want to attack the dragon with \n"
-					+ "a yell or a kick");
+			String attack1 = JOptionPane.showInputDialog("do you want to attack the sweat with \n"
+					+ "a shotgun or a rifle");
 			
 			if (attack1.equalsIgnoreCase("yell")) {
-				dragonhealth-=ran.nextInt(10);
+				sweathealth-=ran.nextInt(10);
 			}
 			if (attack1.equalsIgnoreCase("kick")) {
-				dragonhealth-=ran.nextInt(10)+10;
+				sweathealth-=ran.nextInt(10)+10;
 			}
 
 				// 3. Ask the player in a pop-up if they want to attack the dragon with a yell
@@ -62,8 +62,8 @@ public class DragonFight {
 			// THE DRAGON RETALIATES
 
 				// 7. Find a random number between 0 and 35 and store it in dragonAttack
-			dragonattack = ran.nextInt(34);
-			playerhealth -= dragonattack;
+			sweatattack = ran.nextInt(34)+100;
+			playerhealth -= sweatattack;
 	
 				// 8. Subtract the dragon attack value from the player's health
 
@@ -72,19 +72,35 @@ public class DragonFight {
 				// 9. If the player's health is less than or equal to 0, the game is over,
 				//    call the playerLost() method
 			if (playerhealth <=0) {
+				
+				String youlost = 
+						"skill issue, you died";
+				JOptionPane.showMessageDialog(null, youlost);
 				playerLost();
 			}
 	
 			
 				// 10. If the dragon's health is less than or equal to 0, the game is over,
 				//     call the dragonLost() method
-			if (dragonhealth <=0) {
+			if (sweathealth <=0) {
+				String youwon = 
+						"number 1 victory royal , you won";
+				JOptionPane.showMessageDialog(null, youwon);
 				dragonLost();
 			}
 			
 				// 11.  Pop up a message that tells us how much health the player and
 				// 		dragon have left.
-
+			String damageassesment = 
+					
+					"You have "+playerhealth+" health \n"
+							+ "and the dragon has "+sweathealth;
+			JOptionPane.showMessageDialog(null, damageassesment);
+					
+							
+					
+				
+					
 			
 			// (Bonus: Also display the amount of health that was lost by each in this
 			// round)
